@@ -4,9 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.history
 # testing
 /coverage
+
+.env
 
 # next.js
 /.next/

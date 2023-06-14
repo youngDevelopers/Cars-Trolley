@@ -22,7 +22,7 @@ const SearchManufacturer = ({
             .includes(searchQuery.toString().toLowerCase().replace(/\s+/g, ""))
         );
 
-  console.log(filterdManufacturers)
+  //console.log(filterdManufacturers)
 
   return (
     <div className="search-manufacturer">

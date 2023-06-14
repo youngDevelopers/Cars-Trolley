@@ -1,10 +1,12 @@
+"use client";
+import Image from "next/image";
+
 import { fetchCars } from "@/utils";
 import { CarProps, HomeProps } from "@/types";
 import { fuels, yearsOfProduction } from "@/constants";
 import { CarCard, SearchBar, CustomFilter, Hero, ShowMore } from "@/components";
 
 export default async function Home({ searchParams }: HomeProps) {
-
   console.log(searchParams);
 
   const allCars = await fetchCars({
@@ -15,6 +17,7 @@ export default async function Home({ searchParams }: HomeProps) {
     model: searchParams.model || "",
   });
 
+  console.log(allCars);
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
